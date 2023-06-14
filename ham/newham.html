@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger menu</title>
+    <link rel="stylesheet" href="newhamstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="ri-menu-line menu-icon"></i>
+        </div>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="ri-menu-line menu-icon"></i>
+            </div>
+
+            <div class="left">
+                <div class="profile">
+                    <div class="man_img"></div>
+                    <div class="name_info">
+                     <h3>Mayank P</h3>
+                     <h3>Designation</h3>
+                    </div>
+                </div>
+
+            <div class="sidebar_content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="#" class="nav_link">
+                            <i class="ri-building-fill icon"></i>
+                            <span class="link">college</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav_link">
+                            <i class="ri-book-read-line icon"></i>
+                            <span class="link">University</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav_link">
+                            <i class="ri-profile-line icon"></i>
+                            <span class="link">Student</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav_link">
+                            <i class="ri-book-read-line icon"></i>
+                            <span class="link">Course</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom_content">
+                    <li class="list">
+                        <a href="#" class="nav_link">
+                            <i class="ri-settings-5-fill icon"></i>
+                            <span class="link">Settings</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav_link">
+                            <i class="ri-logout-circle-r-line icon"></i>
+                            <span class="link">logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+ <sevtion class="overlay"></sevtion>
+
+ <script>
+    const navBar = document.querySelector("nav"),
+          menuBtns = document.querySelectorAll(".menu-icon"),
+          overlay = document.querySelectorAll(".overlay");
+
+          menuBtns.forEach(menuBtn => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            }); 
+          });
+    
+          overlay.addEventListener("click", () =>{
+            navBar.classList.remove("open");
+          });
+ </script>
+</body>
+</html>
